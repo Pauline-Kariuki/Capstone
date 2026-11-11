@@ -1,0 +1,5 @@
+[server]
+maxUploadSize = 500        # MB; a ZIP of ~200 PNG frames is typically 50-150 MB
+
+[theme]
+primaryColor = "#1e6b3a"

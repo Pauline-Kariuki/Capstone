@@ -1,0 +1,6 @@
+streamlit>=1.40
+numpy
+pandas
+Pillow
+opencv-python-headless   # only used to read video uploads
+ai-edge-litert           # light TFLite runtime. If it fails to install, replace with: tensorflow-cpu

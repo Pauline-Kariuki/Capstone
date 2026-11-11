@@ -1,0 +1,96 @@
+{
+  "deploy_model": "Dummy only",
+  "feature_model": "taswira_features.tflite",
+  "crop": [
+    50,
+    28,
+    657,
+    467
+  ],
+  "natalia_size": [
+    700,
+    500
+  ],
+  "tau": 0.7,
+  "tau_sweep": 0.5297394682897797,
+  "summary": [
+    {
+      "question": "RQ1 Plane macro-F1 (phantom sweeps)",
+      "result": "0.389 (0.310\u20130.444)",
+      "target": "\u2265 0.70"
+    },
+    {
+      "question": "RQ1 Plane-present AUC / AP (chance)",
+      "result": "0.915 / 0.339 (0.018)",
+      "target": "well above chance"
+    },
+    {
+      "question": "RQ2 Sweep hit@5",
+      "result": "0.771",
+      "target": "\u2265 0.80"
+    },
+    {
+      "question": "RQ2 Sweep sensitivity / specificity",
+      "result": "0.85 / 0.31",
+      "target": "\u2265 0.90 / high"
+    },
+    {
+      "question": "RQ4 TFLite size / CPU latency",
+      "result": "7.2 MB / 284 ms",
+      "target": "< 20 MB / < 200 ms"
+    },
+    {
+      "question": "RQ5b African scans, Dummy only: detected / right view",
+      "result": "0.00 / 0.18",
+      "target": "as high as possible"
+    },
+    {
+      "question": "RQ6 Breech flag: accuracy (95% CI) / AUC",
+      "result": "0.78 (0.69\u20130.87) / 0.86",
+      "target": "above chance (0.54)"
+    },
+    {
+      "question": "RQ6 Shortcut check: best 'no head' rule AUC",
+      "result": "0.61",
+      "target": "clearly below the model's 0.86"
+    },
+    {
+      "question": "Defect screening (exploratory): normal vs abnormal AUC / flagged sensitivity / specificity",
+      "result": "1.00 / 0.90 / 1.00",
+      "target": "sensitivity \u2265 0.90 (screening)"
+    }
+  ],
+  "anom": {
+    "classes": [
+      "anold-chiari-malformation",
+      "arachnoid-cyst",
+      "cerebellah-hypoplasia",
+      "colphocephaly",
+      "encephalocele",
+      "holoprosencephaly",
+      "hydracenphaly",
+      "intracranial-hemorrdge",
+      "intracranial-tumor",
+      "m-magna",
+      "mild-ventriculomegaly",
+      "moderate-ventriculomegaly",
+      "normal",
+      "polencephaly",
+      "severe-ventriculomegaly"
+    ],
+    "normal_index": 12,
+    "tau_anom": 0.9859020225016942,
+    "tau_refer": 0.9859020225016942,
+    "ood_limit": 0.6061666011810303,
+    "nice": {
+      "anold-chiari-malformation": "Arnold-Chiari malformation",
+      "cerebellah-hypoplasia": "cerebellar hypoplasia",
+      "colphocephaly": "colpocephaly",
+      "hydracenphaly": "hydranencephaly",
+      "intracranial-hemorrdge": "intracranial haemorrhage",
+      "m-magna": "mega cisterna magna",
+      "polencephaly": "porencephaly",
+      "vein-of-galen": "vein of Galen malformation"
+    }
+  }
+}
